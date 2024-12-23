@@ -21,7 +21,7 @@ export const getWing = getOne(Wing, "", "offices officeCount");
 
 export const getWings = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
-    const initialPopulate = ["offices", "officeCount"];
+    const initialPopulate = "offices officeCount";
     const searchFields = ["name"];
     let initialQuery: { [key: string]: any } = {};
     if (req.query.center) {
@@ -35,7 +35,7 @@ export const getWings = asyncHandler(
 
     const initialMongooseQuery = Wing.find().sort("-createdAt");
     const countDocuments = await Wing.countDocuments();
-
+    // console.log("req.query", req.query);
     // // Execute the query
     const apiFeatures = new ApiFeatures(initialMongooseQuery, req.query)
       .filter(["center"], initialQuery)

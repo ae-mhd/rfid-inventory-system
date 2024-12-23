@@ -94,6 +94,7 @@ export const getAll = (
       // console.log("Initial Query:", req.query);
 
       // Execute the query
+
       const apiFeatures = new ApiFeatures(initialMongooseQuery, req.query)
         .filter()
         .sort()

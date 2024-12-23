@@ -43,14 +43,14 @@ class ApiFeatures {
     }
     return this;
   }
-  populate(initialPopulate: string[] = [""]) {
+  populate(initialPopulate: string = "") {
     if (this.queryString.populate) {
-      const populateString = this.queryString.populate.trim() as string;
+      const populateString = (this.queryString.populate +
+        " " +
+        initialPopulate.trim()) as string;
       // exclude password if exist
-      const populateFields = [
-        ...populateString.split(","),
-        ...initialPopulate,
-      ].filter((field) => field.trim() !== "password");
+      const populateFields = populateString.split(",");
+      // .filter((field) => field.trim() !== "password");
       const populateQuery = populateFields.join(" ");
       this.mongooseQuery = this.mongooseQuery.populate(populateQuery);
     }
