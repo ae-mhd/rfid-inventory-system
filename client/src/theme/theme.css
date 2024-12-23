@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* ====Custom Class =====*/
+  .text-primary-dark-light {
+    @apply text-primary-light-text dark:text-primary-dark-text;
+  }
+  .text-secondary-dark-light {
+    @apply text-secondary-light-text dark:text-secondary-dark-text;
+  }
+  .bg-primary-dark-light {
+    @apply bg-primary-light-bg dark:bg-primary-dark-bg;
+  }
+  .bg-secondary-dark-light {
+    @apply bg-secondary-light-bg dark:bg-secondary-dark-bg;
+  }
+
+  .bg-tertiary-dark-light {
+    @apply bg-[#F1F4F9] dark:bg-[#323D4E];
+  }
+
+  .border-primary-dark-light {
+    @apply border-secondary-dark dark:border-[#F1F5F9] rounded-md;
+  }
+  .text-color-gray {
+    @apply text-[#ffffffb3];
+  }
+  .text-dark-light {
+    @apply text-[24px] font-bold leading-[31.2px];
+  }
+  .h1-bold {
+    @apply text-[30px] font-bold leading-[42px];
+  }
+
+  .h2-bold {
+    @apply text-[24px] font-bold leading-[31.2px];
+  }
+
+  .h2-semibold {
+    @apply text-[24px] font-semibold leading-[31.2px];
+  }
+
+  .h3-bold {
+    @apply text-[20px] font-bold leading-[26px];
+  }
+
+  .h3-semibold {
+    @apply text-[20px] font-semibold leading-[24.8px];
+  }
+
+  .base-medium {
+    @apply text-[13px] font-medium leading-5;
+  }
+  .paragraph-regular {
+    @apply text-[16px] font-normal leading-[22.4px];
+  }
+  .shadow-light100_dark100 {
+    @apply shadow-dark-100    dark:shadow-slate-400;
+  }
+  .elemen-hover_dark-light {
+    @apply cursor-pointer  hover:bg-[#c2c2c257]   hover:dark:bg-[#ffffff14];
+  }
+
+  .invert-colors {
+    @apply invert dark:invert-0;
+  }
+  /* .placeholder {
+    @apply placeholder:text-light-400 dark:placeholder:text-light-500;
+  } */
+  .placeholder-bg {
+    @apply bg-[#F6F8FB] dark:bg-[#2E394A];
+  }
+
+  /* =================================== */
+
+  /* .dark-gradient {
+    background: linear-gradient(
+      232deg,
+      rgba(23, 28, 35, 0.41) 0%,
+      rgba(19, 22, 28, 0.7) 100%
+    );
+  } */
+}
