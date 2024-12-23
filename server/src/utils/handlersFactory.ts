@@ -87,7 +87,7 @@ export const getAll = (
     async (req: Request, res: Response, next: NextFunction) => {
       const countDocuments = await model.countDocuments();
       const initialMongooseQuery = model.find().sort("-createdAt");
-      if (initialPopulate) {
+      if (!!initialPopulate) {
         initialMongooseQuery.populate(initialPopulate);
       }
       // Debug: Log the initial query

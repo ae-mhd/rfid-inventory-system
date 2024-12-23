@@ -7,6 +7,12 @@ import {
   updateOne,
 } from "../utils/handlersFactory";
 
+export const updateFloor = updateOne(Floor);
+export const createFloor = createOne(Floor);
+export const deleteFloor = deleteOne(Floor);
+export const getFloors = getAll(Floor, ["name"], [], "wings wingCount");
+export const getFloor = getOne(Floor, "", "wings wingCount");
+
 // export const createFloor = asyncHandler(
 //   async (req: Request, res: Response, next: NextFunction) => {
 //     const { center: centerId }: { center: string } = req.body;
@@ -143,8 +149,3 @@ import {
 //     });
 //   }
 // );
-export const updateFloor = updateOne(Floor);
-export const createFloor = createOne(Floor);
-export const deleteFloor = deleteOne(Floor);
-export const getFloors = getAll(Floor, ["name"], [], "wings wingCount");
-export const getFloor = getOne(Floor, "", "wings wingCount");
