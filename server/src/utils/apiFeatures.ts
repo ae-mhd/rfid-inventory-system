@@ -44,6 +44,8 @@ class ApiFeatures {
     return this;
   }
   populate(initialPopulate: string = "") {
+    console.log("queryString.populate", this.queryString.populate);
+    console.log("initialPopulate", initialPopulate);
     if (this.queryString.populate) {
       const populateString = (this.queryString.populate +
         " " +
